@@ -1,0 +1,100 @@
+﻿@model My_Portfolio.Models.Entities.Header
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Menü Düzenle</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card-body">
+
+                            <form role="form" method="post" asp-controller="Admin" asp-action="Menu">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="mb-3">
+                                    <label>Menü 1</label>
+                                    <input type="text" class="form-control" placeholder="Menü 1" aria-label="Email" aria-describedby="email-addon" name="Nav1" asp-for="Nav1">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 2</label>
+                                    <input type="text" class="form-control" placeholder="Menü 2" aria-label="Password" aria-describedby="password-addon" name="Nav2" asp-for="Nav2">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 3</label>
+                                    <input type="text" class="form-control" placeholder="Menü 3" aria-label="Password" aria-describedby="password-addon" name="Nav3" asp-for="Nav3">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 4</label>
+                                    <input type="text" class="form-control" placeholder="Menü 4" aria-label="Password" aria-describedby="password-addon" name="Nav4" asp-for="Nav4">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 5</label>
+                                    <input type="text" class="form-control" placeholder="Menü 5" aria-label="Password" aria-describedby="password-addon" name="Nav5" asp-for="Nav5">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 6</label>
+                                    <input type="text" class="form-control" placeholder="Menü 6" aria-label="Password" aria-describedby="password-addon" name="Nav6" asp-for="Nav6">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 1 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 1 Link" aria-label="Password" aria-describedby="password-addon" name="Nav1Link" asp-for="Nav1Link">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 2 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 2 Link" aria-label="Password" aria-describedby="password-addon" name="Nav2Link" asp-for="Nav2Link">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 3 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 3 Link" aria-label="Password" aria-describedby="password-addon" name="Nav3Link" asp-for="Nav3Link">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 4 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 4 Link" aria-label="Password" aria-describedby="password-addon" name="Nav4Link" asp-for="Nav4Link">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 5 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 5 Link" aria-label="Password" aria-describedby="password-addon" name="Nav5Link" asp-for="Nav5Link">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Menü 6 Link</label>
+                                    <input type="text" class="form-control" placeholder="Menü 6 Link" aria-label="Password" aria-describedby="password-addon" name="Nav6Link" asp-for="Nav6Link">
+
+                                </div>
+                                @if (TempData["Uyarı"] != null)
+                                {
+                                    <div class="alert alert-secondary text-light ">
+                                        @TempData["Uyarı"]
+                                    </div>
+                                }
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Kaydet</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

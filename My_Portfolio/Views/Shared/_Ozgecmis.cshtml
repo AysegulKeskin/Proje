@@ -1,0 +1,63 @@
+﻿@model My_Portfolio.Models.IndexViewModel
+@{
+    var data = Model.Titles.ElementAt(0);
+    var data2 = Model.OzgecmisOzets.ElementAt(0);
+    
+   
+}
+<section id="resume" class="resume">
+    <div class="container">
+
+        <div class="section-title">
+            <span>@data.OzgecmisTitle</span>
+            <h2>@data.OzgecmisTitle</h2>
+            <p>@data.OzgecmisAciklama</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="resume-title">@data.OzgecmisAltBaslik1</h3>
+                <div class="resume-item pb-0">
+                    <h4>@data2.Ad @data2.Soyad</h4>
+                    <p><em>@data2.Aciklama</em></p>
+                    <p>
+                        <ul>
+                            <li>@data2.Adres</li>
+                            <li>@data2.Telefon</li>
+                            <li>@data2.Email</li>
+                            <li>@data2.MedeniHal</li>
+                            <li>@data2.Ehliyet</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <h3 class="resume-title">@data.OzgecmisAltBaslik2</h3>
+                @foreach (var item in Model.OzgecmisEgitims)
+                {
+                      <div class="resume-item">
+                    <h4>@item.Bolum</h4>
+                    <h5>@item.Yil</h5>
+                    <p><em>@item.Okul</em></p>
+                    <p>@item.Aciklama</p>
+                      </div>
+                }
+                
+            </div>
+            <div class="col-lg-6">
+                <h3 class="resume-title">@data.OzgecmisAltBaslik3</h3>
+                  @foreach (var item in Model.OzgecmisIsDeneyimleris)
+                    {
+                              <div class="resume-item">
+                        <h4>@item.Bolum</h4>
+                        <h5>@item.Tarih</h5>
+                        <p><em>@item.Adres</em></p>
+                        <p>@item.Aciklama</p>
+                             </div>
+                    }
+
+              
+            </div>
+        </div>
+
+    </div>
+</section>

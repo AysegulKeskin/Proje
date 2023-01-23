@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@{
+    await Html.RenderPartialAsync("_Head");
+}
+
+<body>
+
+ 
+  @{
+    await Html.RenderPartialAsync("_Header");
+}
+ 
+  @{
+    await Html.RenderPartialAsync("_Hero");
+}
+ 
+
+  <main id="main">
+
+        @{
+            await Html.RenderPartialAsync("_About");
+        }
+
+ 
+     @{
+            await Html.RenderPartialAsync("_Ozgecmis");
+        }
+ 
+
+        @{
+            await Html.RenderPartialAsync("_Services");
+        }
+
+
+        @{
+            await Html.RenderPartialAsync("_Referanslar");
+        }
+
+
+        @{
+            await Html.RenderPartialAsync("_Portfolio");
+        }
+
+       
+
+        @{
+            await Html.RenderPartialAsync("_Contact");
+        }
+
+
+  </main><!-- End #main -->
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    @{
+        await Html.RenderPartialAsync("_Scripts");
+    }
+
+</body>
+
+</html>

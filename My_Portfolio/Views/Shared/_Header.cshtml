@@ -1,0 +1,20 @@
+﻿@model My_Portfolio.Models.IndexViewModel
+@{
+    var data = Model.Headers.ElementAt(0);
+}
+<header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="@data.Nav1Link">@data.Nav1</a></li>
+        <li><a class="nav-link scrollto" href="@data.Nav2Link">@data.Nav2</a></li>
+        <li><a class="nav-link scrollto" href="@data.Nav3Link">@data.Nav3</a></li>
+        <li><a class="nav-link scrollto" href="@data.Nav4Link">@data.Nav4</a></li>
+        <li><a class="nav-link scrollto " href="@data.Nav5Link">@data.Nav5</a></li>
+        <li><a class="nav-link scrollto" href="@data.Nav6Link">@data.Nav6</a></li>
+            <li><a class="nav-link scrollto" asp-controller="Login" asp-action="Index" >Admin Paneli</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+
+  </header>

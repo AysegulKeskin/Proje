@@ -1,0 +1,97 @@
+﻿@model My_Portfolio.Models.Entities.Title
+
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Başlıklar Düzenle</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+
+                <div class="table-responsive p-0">
+
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card-body">
+                            @if (TempData["Uyarı"] != null)
+                            {
+                                <div class="alert alert-secondary text-light ">
+                                    @TempData["Uyarı"]
+                                </div>
+                            }
+                            <form role="form" method="post" asp-controller="Admin" asp-action="Titles">
+                                <input type="hidden" asp-for="Id" />
+
+
+                                <div class="mb-3">
+                                    <label>Hakkımda Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Hakkımda Başlık" aria-label="Email" aria-describedby="email-addon" name="AboutTitle" asp-for="AboutTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Hakkımda Açıklama</label>
+                                    <input type="text" class="form-control" placeholder="Hakkımda Açıklama" aria-label="Password" aria-describedby="password-addon" name="AboutAciklama" asp-for="AboutAciklama">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Özgeçmiş Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Özgeçmiş Başlık" aria-label="Email" aria-describedby="email-addon" name="OzgecmisTitle" asp-for="OzgecmisTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Özgeçmiş Açıklama</label>
+                                    <input type="text" class="form-control" placeholder="Özgeçmiş Açıklama" aria-label="Password" aria-describedby="password-addon" name="OzgecmisAciklama" asp-for="OzgecmisAciklama">
+                                </div>
+                                 <div class="mb-3">
+                                    <label>Özgeçmiş Alt Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Özgeçmiş Alt Başlık" aria-label="Email" aria-describedby="email-addon" name="OzgecmisAltBaslik1" asp-for="OzgecmisAltBaslik1">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Özgeçmiş Alt Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Özgeçmiş Alt Başlık" aria-label="Password" aria-describedby="password-addon" name="OzgecmisAltBaslik2" asp-for="OzgecmisAltBaslik2">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Özgeçmiş Alt Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Özgeçmiş Alt Başlık" aria-label="Email" aria-describedby="email-addon" name="OzgecmisAltBaslik3" asp-for="OzgecmisAltBaslik3">
+                                </div>
+                                <div class="mb-3">
+                                    <label>ServicesTitle</label>
+                                    <input type="text" class="form-control" placeholder="ServicesTitle" aria-label="Password" aria-describedby="password-addon" name="ServicesTitle" asp-for="ServicesTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label>ServicesAciklama</label>
+                                    <input type="text" class="form-control" placeholder="ServicesAciklama" aria-label="Email" aria-describedby="email-addon" name="ServicesAciklama" asp-for="ServicesAciklama">
+                                </div>
+                                <div class="mb-3">
+                                    <label>PortfolioTitle</label>
+                                    <input type="text" class="form-control" placeholder="PortfolioTitle" aria-label="Password" aria-describedby="password-addon" name="PortfolioTitle" asp-for="PortfolioTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label>PortfolioAciklama</label>
+                                    <input type="text" class="form-control" placeholder="PortfolioAciklama" aria-label="Password" aria-describedby="password-addon" name="PortfolioAciklama" asp-for="PortfolioAciklama">
+                                </div>
+                                <div class="mb-3">
+                                    <label>ContactTitle</label>
+                                    <input type="text" class="form-control" placeholder="ContactTitle" aria-label="Password" aria-describedby="password-addon" name="ContactTitle" asp-for="ContactTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label>ContactAciklama</label>
+                                    <input type="text" class="form-control" placeholder="ContactAciklama" aria-label="Password" aria-describedby="password-addon" name="ContactAciklama" asp-for="ContactAciklama">
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Kaydet</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

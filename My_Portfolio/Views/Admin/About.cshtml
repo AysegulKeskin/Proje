@@ -1,0 +1,110 @@
+﻿@model My_Portfolio.Models.Entities.About
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Hakkımda Düzenle</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card-body">
+                            @if (TempData["Uyarı"] != null)
+                            {
+                                <div class="alert alert-secondary text-light ">
+                                    @TempData["Uyarı"]
+                                </div>
+                            }
+                            <form role="form" method="post" asp-controller="Admin" asp-action="About" enctype="multipart/form-data">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="row">
+                                    <div class=" col-md-6">
+                                        <label>Fotoğrafınızı Seçiniz</label>
+                                        <input asp-for="Img" name="Foto" class="form-control mb-3 mt-3" type="file" id="Image">
+                                        <label>Ad Soyad</label>
+                                        <input type="text" class="form-control" placeholder="Ad Soyad" aria-label="Password" aria-describedby="password-addon" name="Name" asp-for="Name">
+
+                                        <label>Website</label>
+                                        <input type="text" class="form-control" placeholder="Website" aria-label="Password" aria-describedby="password-addon" name="Website" asp-for="Website">
+
+                                        <label>Telefon</label>
+                                        <input type="text" class="form-control" placeholder="Telefon" aria-label="Password" aria-describedby="password-addon" name="Phone" asp-for="Phone">
+
+                                        <label>Şehir</label>
+                                        <input type="text" class="form-control" placeholder="Şehir" aria-label="Password" aria-describedby="password-addon" name="City" asp-for="City">
+
+                                    </div>
+
+                                    <div class=" col-md-6">
+                                        <label>Yaş</label>
+                                        <input type="number" class="form-control" placeholder="Yaş" aria-label="Password" aria-describedby="password-addon" name="Age" asp-for="Age">
+
+                                        <label>Derece</label>
+                                        <input type="text" class="form-control" placeholder="Derece" aria-label="Password" aria-describedby="password-addon" name="Degree" asp-for="Degree">
+
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" placeholder="Email" aria-label="Password" aria-describedby="password-addon" name="Email" asp-for="Email">
+
+                                        <label>Serbestlik Durumu</label>
+                                        <input type="text" class="form-control" placeholder="Serbestlik Durumu" aria-label="Password" aria-describedby="password-addon" name="Serbestlik" asp-for="Serbestlik">
+
+                                    </div>
+                                    <div class="card-header pb-0">
+                                        <h6>Hakkımda Alt Düzenle</h6>
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <label>
+                                            Mutlu Müşteriler
+                                        </label>
+                                        <input type="number" class="form-control" placeholder="Data1" aria-label="Password" aria-describedby="password-addon" name="Data1" asp-for="Data1">
+                                        <label>Aciklama1</label>
+                                        <input type="text" class="form-control" placeholder="Aciklama1" aria-label="Password" aria-describedby="password-addon" name="Aciklama1" asp-for="Aciklama1">
+
+                                        <label>
+                                            Yılların Deneyimi
+                                        </label>
+                                        <input type="number" class="form-control" placeholder="Data3" aria-label="Password" aria-describedby="password-addon" name="Data3" asp-for="Data3">
+                                        <label>Aciklama3</label>
+                                        <input type="text" class="form-control" placeholder="Aciklama3" aria-label="Password" aria-describedby="password-addon" name="Aciklama3" asp-for="Aciklama3">
+
+                                    </div>
+                                     <div class=" col-md-6">
+                                        <label>Projeler</label>
+                                        <input type="number" class="form-control" placeholder="Data2" aria-label="Password" aria-describedby="password-addon" name="Data2" asp-for="Data2">
+                                        <label>Aciklama2</label>
+                                        <input type="text" class="form-control" placeholder="Aciklama2" aria-label="Password" aria-describedby="password-addon" name="Aciklama2" asp-for="Aciklama2">
+
+                                        <label>Ödüller</label>
+                                        <input type="number" class="form-control" placeholder="Data4" aria-label="Password" aria-describedby="password-addon" name="Data4" asp-for="Data4">
+                                        <label>Aciklama4</label>
+                                        <input type="text" class="form-control" placeholder="Aciklama4" aria-label="Password" aria-describedby="password-addon" name="Aciklama4" asp-for="Aciklama4">
+
+                                        
+                                    </div>
+
+
+
+                                </div>
+
+                              
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Kaydet</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

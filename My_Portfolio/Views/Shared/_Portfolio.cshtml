@@ -1,0 +1,35 @@
+﻿@model My_Portfolio.Models.IndexViewModel
+@{
+    var data = Model.Titles.ElementAt(0);
+}
+<section id="portfolio" class="portfolio">
+    <div class="container">
+
+        <div class="section-title">
+            <span>@data.PortfolioTitle</span>
+            <h2>@data.PortfolioTitle</h2>
+            <p>@data.PortfolioAciklama</p>
+        </div>
+
+       
+
+        <div class="row portfolio-container">
+
+           @foreach (var item in Model.Portfolios)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item ">
+                    <div class="portfolio-img"><img src="~/assets/img/portfolio/@item.Img" class="img-fluid" alt=""></div>
+                    <div class="portfolio-info">
+                        <h4>@item.Baslik</h4>
+                        <p>@item.Aciklama</p>
+                        <a href="~/assets/img/portfolio/@item.Img" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                        <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                </div>
+            }
+
+           
+        </div>
+
+    </div>
+</section>

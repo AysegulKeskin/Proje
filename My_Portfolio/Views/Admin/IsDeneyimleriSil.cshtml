@@ -1,0 +1,42 @@
+﻿@model My_Portfolio.Models.Entities.OzgecmisIsDeneyimleri
+
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>İş Deneyimleri Sil</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+
+                <div class="table-responsive p-0">
+
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card center" style="width: 18rem;">
+                            @*<img class="card-img-top" src="..." alt="Card image cap">*@
+                            <form method="post">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bilgileri Silmek İstediğinizden Emin Misiniz?</h5>
+                                    <p class="card-text"><strong> Bölüm: </strong>@Model.Bolum</p>
+                                    <p class="card-text"><strong>Yıl:</strong>@Model.Tarih</p>
+                                    <p class="card-text"><strong>Okul:</strong>@Model.Adres</p>
+                                    <p class="card-text"><strong>Açıklama:</strong>@Model.Aciklama</p>
+
+                                    <button class="btn btn-primary" type="submit">Sil</button>
+                                    <a class="btn btn-primary" asp-controller="Admin" asp-action="IsDeneyimleri">Vazgeç</a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

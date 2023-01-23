@@ -1,0 +1,53 @@
+﻿@model My_Portfolio.Models.Entities.AboutEnd
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Hakkımda Alt Düzenle</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+
+                <div class="table-responsive p-0">
+
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card-body">
+
+                            <form role="form" method="post" asp-controller="Admin" asp-action="AboutAltDuzenle">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="mb-3">
+                                    <label>Bilgi</label>
+                                    <input type="text" class="form-control" placeholder="Bilgi" aria-label="Email" aria-describedby="email-addon" name="Bilgi" asp-for="Bilgi">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Değer</label>
+                                    <input type="text" class="form-control" placeholder="Değer" aria-label="Password" aria-describedby="password-addon" name="Deger" asp-for="Deger">
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <button asp-controller="Admin" asp-action="AboutAltDuzenle" type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Kaydet</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button asp-asp-controller="Admin" asp-action="SAboutAlt" class="btn bg-gradient-primary w-100 mt-4 mb-0">Vazgeç</button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

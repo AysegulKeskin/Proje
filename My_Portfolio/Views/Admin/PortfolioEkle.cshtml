@@ -1,0 +1,60 @@
+﻿@model My_Portfolio.Models.Entities.Portfolio
+
+@{
+    Layout = "~/Views/Shared/Admin/_LayoutAdmin.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Fotoğraf Ekle</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+
+                <div class="table-responsive p-0">
+
+                    <table class="table align-items-center mb-0">
+
+                        <div class="card-body">
+
+                            <form role="form" method="post" asp-controller="Admin" asp-action="PortfolioEkle" enctype="multipart/form-data">
+                                <input type="hidden" asp-for="Id" />
+                                <div class="mb-3">
+                                    <label>Fotoğraf</label>
+                                    <input type="file" id="Image" class="form-control" placeholder="Img" aria-label="Email" aria-describedby="email-addon" name="Foto" asp-for="Img" required>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Başlık</label>
+                                    <input type="text" class="form-control" placeholder="Başlık" aria-label="Password" aria-describedby="password-addon" name="Baslik" asp-for="Baslik">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label>Açıklama</label>
+                                    <input type="text" class="form-control" placeholder="Açıklama" aria-label="Password" aria-describedby="password-addon" name="Aciklama" asp-for="Aciklama">
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Kaydet</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <a asp-controller="Admin" asp-action="Portfolio" class="btn bg-gradient-primary w-100 mt-4 mb-0">Vazgeç</a>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

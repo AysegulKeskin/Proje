@@ -1,0 +1,75 @@
+﻿@model My_Portfolio.Models.IndexViewModel
+@{
+    var data2 = Model.Titles.ElementAt(0);
+    var data = Model.ContactLefts.ElementAt(0);
+}
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <span>@data2.ContactTitle</span>
+            <h2>@data2.ContactTitle</h2>
+            <p>@data2.ContactAciklama</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-box">
+                            <i class="bx bx-share-alt"></i>
+                            <h3>Social Profiles</h3>
+                            <div class="social-links">
+                                <a href="@data.Link1" class="twitter"><i class="bi bi-twitter"></i></a>
+                                <a href="@data.Link2" class="facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="@data.Link3" class="instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="@data.Link4" class="google-plus"><i class="bi bi-skype"></i></a>
+                                <a href="@data.Link5" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Email Me</h3>
+                            <p>@data.Email</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Call Me</h3>
+                            <p>@data.Phone</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <form asp-controller="Home" asp-action="Index" method="post" role="form" class="email-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="AdSoyad" class="form-control" id="AdSoyad" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="Email" id="Email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="Konu" id="Konu" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="Aciklama" id="Aciklama" rows="6" placeholder="Message" required></textarea>
+                    </div>
+                    
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
